@@ -125,6 +125,13 @@ mv Titillium Titillium.zip
 unzip Titillium.zip -d Titillium
 sudo cp ./Titillium/*.otf /usr/share/fonts/ 
 
+# Install Wine 
+sudo apt-get install wine
+
+# Install VS Code
+sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+sudo apt-get update && sudo apt-get install ubuntu-make
+umake web visual-studio-code
 
 # Only office - Amazing
 # sudo add-apt-repository "deb http://download.onlyoffice.com/repo/debian squeeze main"
@@ -132,4 +139,13 @@ sudo cp ./Titillium/*.otf /usr/share/fonts/
 # sudo apt-key add onlyoffice.key
 # sudo apt-get update
 # sudo apt-get install onlyoffice
+
+# fix the build bug
+sudo mv /usr/bin/android /usr/bin/android2
+
+sudo add-apt-repository "deb http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/ ./"
+wget -q http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/Release.key -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install ibus-avro-trusty
+
 
