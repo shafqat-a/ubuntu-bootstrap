@@ -148,4 +148,14 @@ wget -q http://download.opensuse.org/repositories/home:/sarimkhan/xUbuntu_14.04/
 sudo apt-get update
 sudo apt-get install ibus-avro-trusty
 
+cd ~/Downloads
+#Download webstorm
+wget http://download-cf.jetbrains.com/webstorm/WebStorm-10.0.2.tar.gz 
+
+#get Davmail 
+wget http://heanet.dl.sourceforge.net/project/davmail/davmail/4.6.1/davmail_4.6.1-2343-1_all.deb
+
+
+
+
 
