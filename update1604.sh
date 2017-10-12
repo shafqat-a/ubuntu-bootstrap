@@ -1,48 +1,31 @@
-export SOURCE_DIR = ~/downloads/sourced
-
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install axel
-cd ~/Downloads
+#sudo apt-get update
+#sudo apt-get dist-upgrade
 
 # Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt-get install libappindicator1 -y
-sudo apt-get -f install
+#cd /tmp
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#sudo dpkg -i google-chrome-stable_current_amd64.deb
+#sudo apt-get install libappindicator1 -y
+#sudo apt-get -f install
 
-sudo apt-get install unity-tweak-tool 
-sudo apt-get install openssh-server
-sudo apt-get install git
+# Other tools
+#sudo apt-get install unity-tweak-tool openssh-server git mc -y 
 
-# Teamviewer
-wget http://download.teamviewer.com/download/teamviewer_i386.deb
-sudo dpkg -i teamviewer_i386.deb
-sudo apt-get -f install
+# Install Node
 
-# install node
-#manual
-#sudo apt-get install g++ gcc python2.7 make
-#cd ~/
-#mkdir git
-#cd git
-#git clone https://github.com/joyent/node
-#cd node
-#./configure
-#make
-#sudo make install
-sudo apt-get install nodejs
-sudo ln /usr/bin/nodejs /usr/bin/node
-sudo apt-get install npm
-
-sudo npm install grunt -g
-sudo npm install gulp -g
-sudo npm install bower -g
+#sudo apt install nodejs npm -y
+#sudo npm install grunt gulp bower -g
 
 # Update node to latest 
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
+# sudo npm cache clean -f
+# sudo npm install -g n
+#sudo n stable
+
+
+git config --global user.email "shafqatahmed@gmail.com"
+git config --global user.name "Shafqat Ahmed"
+
+exit 
 
 # Install JDK
 
