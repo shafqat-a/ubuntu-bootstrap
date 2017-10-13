@@ -1,70 +1,114 @@
-#sudo apt-get update
-#sudo apt-get dist-upgrade
-
-# Chrome
-#cd /tmp
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#sudo dpkg -i google-chrome-stable_current_amd64.deb
-#sudo apt-get install libappindicator1 -y
-#sudo apt-get -f install
-
-# Other tools
-#sudo apt-get install unity-tweak-tool openssh-server git mc -y 
-
-# Install Node
-
-#sudo apt install nodejs npm -y
-#sudo npm install grunt gulp bower -g
-
-# Update node to latest 
-# sudo npm cache clean -f
-# sudo npm install -g n
-#sudo n stable
 
 
-#git config --global user.email "shafqatahmed@gmail.com"
-#git config --global user.name "Shafqat Ahmed"
+updateLinux () {
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+}
 
-# Install JDK
-#sudo apt-get install default-jre
-#sudo apt-get install default-jdk
+installChrome() {
+    # Chrome
+    cd /tmp
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    sudo apt-get install libappindicator1 -y
+    sudo apt-get -f install
+}
 
-######################ORACLE JDK 
-#sudo apt-get install python-software-properties
-#sudo add-apt-repository ppa:webupd8team/java
-#sudo apt-get update
-#sudo apt-get install oracle-java8-installer
-#cd ~/
-#echo JAVA_HOME=/usr/lib/jvm/java-8-oracle >> .bashrc
-#echo export JAVA_HOME >> .bashrc
-#echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' | sudo tee --append /etc/environment > /dev/null
-#echo 'export JAVA_HOME' | sudo tee --append /etc/environment > /dev/null
-######################################################
+installToolset1() {
+    sudo apt-get install unity-tweak-tool openssh-server git mc -y 
+    git config --global user.email "shafqatahmed@gmail.com"
+    git config --global user.name "Shafqat Ahmed"
+}
 
-#sudo apt-get install mc doublecmd-gtk gparted conky conky-all -y
-## Install Titillioum Font
-#cd ~/Downloads
-#wget http://www.fontsquirrel.com/fonts/download/Titillium
-#mv Titillium Titillium.zip
-#unzip Titillium.zip -d Titillium
-#sudo cp ./Titillium/*.otf /usr/share/fonts/ 
+installNodeJs(){
+    # Install Node
 
-# Install Wine 
-#sudo apt-get install wine
+    sudo apt install nodejs npm -y
+    sudo npm install grunt gulp bower -g
 
-# Install VS Code
-#sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-#sudo apt-get update && sudo apt-get install ubuntu-make
-#umake web visual-studio-code
+    # Update node to latest 
+    sudo npm cache clean -f
+    sudo npm install -g n
+    sudo n stable
+}
 
-umake ide webstorm
-umake ide pycharm-professional
-umake ide idea-ultimate
-umake go go-lang
-umake ide eclipse 
+
+installOpenJdk() {
+    # Install JDK
+    sudo apt-get install default-jre -y
+    sudo apt-get install default-jdk -y
+}
+
+installOracleJdk() {
+    ######################ORACLE JDK 
+    sudo apt-get install python-software-properties -y
+    sudo add-apt-repository ppa:webupd8team/java -y
+    sudo apt-get update
+    sudo apt-get install oracle-java8-installer -y
+    cd ~/
+    echo JAVA_HOME=/usr/lib/jvm/java-8-oracle >> .bashrc
+    echo export JAVA_HOME >> .bashrc
+    echo 'JAVA_HOME=/usr/lib/jvm/java-8-oracle' | sudo tee --append /etc/environment > /dev/null
+    echo 'export JAVA_HOME' | sudo tee --append /etc/environment > /dev/null
+    ######################################################
+}
+
+installToolSet2(){
+    sudo apt-get install mc doublecmd-gtk gparted conky conky-all terminator -y
+}
+
+installFonts() {
+    ## Install Titillioum Font
+    cd ~/Downloads
+    wget http://www.fontsquirrel.com/fonts/download/Titillium
+    mv Titillium Titillium.zip
+    unzip Titillium.zip -d Titillium
+    sudo cp ./Titillium/*.otf /usr/share/fonts/ 
+}
+
+
+installWine() {
+    # Install Wine 
+    sudo apt-get install wine
+}
+
+
+installIDEs() {
+    # Install VS Code
+    sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+    sudo apt-get update && sudo apt-get install ubuntu-make
+    umake web visual-studio-code
+
+    umake ide webstorm
+    umake ide pycharm-professional
+    umake ide idea-ultimate
+    umake go go-lang
+    umake ide eclipse 
+}
+
+
+installThemeMacbuntu() {
+    # Noobslab Macbuntu Theme
+    cd /tmp
+    wget http://drive.noobslab.com/data/Mac/MacBuntu-Wallpapers.zip
+    unzip MacBuntu-Wallpapers.zip -d ~/Pictures/
+    sudo add-apt-repository ppa:noobslab/macbuntu -y
+    sudo apt-get update
+    sudo apt-get install macbuntu-os-icons-lts-v7 macbuntu-os-ithemes-lts-v7 -y
+}
+
+installPlayOnLinux() {
+    wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
+    sudo wget http://deb.playonlinux.com/playonlinux_trusty.list -O /etc/apt/sources.list.d/playonlinux.list
+    sudo apt-get update
+    sudo apt-get install playonlinux -y
+}
+
 
 
 exit 
+
+
 
 
 # Install android SDK tools
